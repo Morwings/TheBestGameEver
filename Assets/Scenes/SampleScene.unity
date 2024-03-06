@@ -203,7 +203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d99fea2ed4f26c42b7c91369ef5dc71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 10
   gravity: 9.8
+  speed: 10
 --- !u!114 &141434925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,7 +218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d99fea2ed4f26c42b7c91369ef5dc71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 0
   gravity: 9.8
+  speed: 0
 --- !u!1 &295291627
 GameObject:
   m_ObjectHideFlags: 0

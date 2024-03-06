@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,17 +45,20 @@ public class PlayerController : MonoBehaviour
         {
             _fallVelocity = -jumpForce;
         }
-        if(_characterContoller.isGrounded)
-        {
-                _fallVelocity = 0;
-        }
+        
+
     }
     
     // Update is called once per frame
     void FixedUpdate()
     {
         _characterContoller.Move(_moveVector * speed * Time.fixedDeltaTime);
-        _fallVelocity += gravity * Time.deltaTime;
+        
+        _fallVelocity += gravity * Time.fixedDeltaTime;
         _characterContoller.Move(Vector3.down * _fallVelocity * Time.fixedDeltaTime);
+        if(_characterContoller.isGrounded)
+        {
+                _fallVelocity = 0;
+        }
     }
 }
