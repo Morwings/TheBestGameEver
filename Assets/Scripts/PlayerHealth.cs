@@ -30,10 +30,15 @@ public class PlayerHealth : MonoBehaviour
         DrawHealthBar();
     }
 
-    void Update()
-    {
-        
+    public void AddHealth(float amount)
+    {    
+        value += amount;
+        value = Mathf.Clamp(value, 0, _maxValue);
+        DrawHealthBar();
     }
+    
+        
+    
 
     private void DrawHealthBar()
     {
